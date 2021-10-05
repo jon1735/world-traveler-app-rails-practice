@@ -8,11 +8,11 @@ class VacationsController < ApplicationController
 
   def create
     @vacation = Vacation.new(vacation_params)
-    if @vacation.save
-      redirect_to country_path(@vacation.country)
-    else
-      render :new
-    end
+      if @vacation.save
+        redirect_to country_path(@vacation.country) 
+      else 
+        render :new 
+      end
   end
 
   private
